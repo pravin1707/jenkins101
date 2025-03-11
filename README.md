@@ -65,6 +65,6 @@ docker run --name jenkins-blueocean --restart=on-failure --detach ^
 
 6. Proceed to the [Setup wizard](https://www.jenkins.io/doc/book/installing/docker/#setup-wizard).
 
-**Sources**
+## Sources
 
 [Setup Guide](https://www.jenkins.io/doc/book/installing/docker/) - Detailed setup guide link (Jenkins official website)
