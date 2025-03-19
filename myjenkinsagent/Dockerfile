@@ -1,11 +1,12 @@
 FROM jenkins/agent:alpine-jdk21
 USER root
 RUN apk add --no-cache python3 py3-pip
-WORKDIR /app
+WORKDIR /myapp
+COPY ../myapp/requirements.txt /app/
 RUN python3 -m venv /app/venv
 RUN /app/venv/bin/pip install --upgrade pip
-COPY . /app
 RUN /app/venv/bin/pip install -r /app/requirements.txt
+COPY ../myapp/ /app/
 USER jenkins
 CMD ["/app/venv/bin/python", "app.py"]
 
